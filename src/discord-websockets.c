@@ -231,7 +231,7 @@ static gboolean discord_ws_in_cb(gpointer data, int source,
     if (ssl_read(dd->ssl, &buf, 1) < 1) {
       if (ssl_errno == SSL_AGAIN)
         return TRUE;
-      imcb_error(ic, "Failed to read ws header.");
+      //imcb_error(ic, "Failed to read ws header.");
       discord_ws_reconnect(ic);
       return FALSE;
     }
